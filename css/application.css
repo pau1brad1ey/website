@@ -1,0 +1,307 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+a {
+  cursor: pointer;
+}
+
+header *,
+footer * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: arial, sans;
+  font-size: 0.866em;
+  background: #222 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.header {
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  background-color: #222;
+  /*background-image: linear-gradient(#333, #222);*/
+  position: fixed;
+  top: 0;
+  /*box-shadow: 0em 3em 5em #000;*/
+  z-index: 9999;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+p {
+  font-size: 0.866em;
+}
+
+#logo img {
+  height: 3em;
+  margin: 0.5em 0;
+}
+
+.main {
+  overflow: visible;
+  padding: 5em 0 0 0;
+}
+
+.fixed {
+  color: #777;
+  font-size: 2em;
+  position: fixed;
+  top: 30%;
+  text-shadow: 0 -2px 1px #000;
+}
+
+.fixed:hover {
+  color: #999;
+  text-shadow: 0 -2px 1px #000;
+}
+
+.main .content {
+  margin: 2em 0;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #bcd4e3;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #222;
+  color: #ccc;
+  padding: 1em 0;
+  font-size: 0.8em;
+}
+
+/*---------------------*/
+/*
+	root element for the scrollable.
+	when scrolling occurs this element stays still.
+*/
+.scrollable {
+  /* required settings */
+  position: relative;
+  overflow: hidden;
+  /*width: 1004px;*/
+  width: 100%;
+  height: 250px;
+  margin: 0 auto;
+  /* custom decorations */
+  /*border:1px solid #ccc;*/
+  /*background:url(/img/global/gradient/h300.png) repeat-x;*/
+}
+
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accomodate scrollable items.
+	it's enough that you set the width and height for the root element and
+	not for this element.
+*/
+.scrollable .items {
+  /* this cannot be too large */
+  width: 20000em;
+  position: absolute;
+  clear: both;
+}
+
+.scrollable ul {
+  margin: 0;
+}
+
+.scrollable .items li {
+  float: left;
+  /*	width:1004px;*/
+  list-style-type: none;
+}
+
+/* single scrollable item */
+.scrollable img {
+  float: right;
+  /*margin:20px 5px 20px 21px;*/
+  background-color: #fff;
+  /*padding:2px;*/
+  /*border:1px solid #ccc;*/
+  width: 1004px;
+  height: 250px;
+  /*
+      box-shadow: -3px -3px -3px -3px 5px #000;
+    -moz-box-shadow: -3px -3px -3px -3px 5px #000;
+    -webkit-box-shadow: -3px -3px 5px #000;
+  */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.scrollable .info {
+  /*
+    position: absolute;
+    bottom:40px;
+    color: #fff;
+    background-color: #000;
+    width: 1004px;
+    line-height: 30px;
+    padding: 10px 20px;
+    */
+  font-size: 1em;
+  position: absolute;
+  width: 400px;
+  height: 160px;
+  margin: 10px 50px 0 50px;
+  padding: 10px 20px;
+  background-color: #222;
+  background: -moz-linear-gradient(center bottom, #222222, #444444) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, center bottom, center top, from(#222222), to(#444444));
+  color: #fff;
+  z-index: 99;
+  /*opacity: 0.8;*/
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 3px 3px 5px #000;
+  -moz-box-shadow: 3px 3px 5px #000;
+  -webkit-box-shadow: 3px 3px 5px #000;
+}
+
+/* active item */
+.scrollable .active {
+  /*	border:2px solid #000;
+  */
+  position: relative;
+  cursor: default;
+}
+
+.scrollable .info h3 {
+  margin: 2px 0 8px 0;
+  color: #55b2ed;
+}
+
+.scrollable .navi-wrap {
+  line-height: 20px;
+  padding: 5px 20px;
+  background: #222;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  line-height: 20px;
+  z-index: 222;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-box-shadow: 3px 3px 5px #000;
+  display: none;
+}
+
+.scrollable .navi-wrap div {
+  display: inline;
+}
+
+.scrollable .navi-wrap a {
+  color: #fff;
+  margin: 0  7px;
+  background-color: #333;
+  padding: 2px 6px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  -moz-box-shadow: -2px -1px 2px #000;
+  /*-moz-text-shadow: 2px 2px 2px #000;*/
+}
+
+.scrollable .navi-wrap a.active {
+  background-color: #55b2ed;
+  /*#22dd00;*/
+  color: #000;
+}
+
+.scrollable .navi-wrap a.prev:hover, .scrollable .navi-wrap a.next:hover {
+  background-color: #55b2ed;
+  /*#22dd00;*/
+  color: #000;
+  cursor: pointer;
+}
+
+/*---------------------*/
+/*
+.ContentFlow .flow .item canvas.content {height:100%;width:100%;margin:0;padding:0;border-radius:0;background-color:transparent;}
+.ContentFlow .flow .item.active cursor:pointer}
+.ContentFlow .flow .item .caption{font-size:100%;font-weight:normal;text-align:center;color:#FFF;max-height:30%;bottom:10%;background:url(img/1x1_0.5_black.png);width:100%;position:absolute;display:none}
+* html .ContentFlow .flow .item .caption{background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='img/1x1_0.5_black.png')}
+.ContentFlow .scrollbar{width:50%;height:16px;background:url(img/scrollbar_white.png) left center repeat-x;overflow:visible;position:relative;z-index:1;visibility:hidden;margin:10px auto 0}
+.ContentFlow .scrollbar .slider{width:16px;height:16px;background:url(img/slider_white.png) center center no-repeat;cursor:move;position:absolute}
+* html .ContentFlow .scrollbar .slider{background-image:none}
+* html .ContentFlow .scrollbar .slider .virtualSlider{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='img/slider_white.png');height:100%}
+.ContentFlow .scrollbar .slider .position{top:120%;font-size:16px;font-weight:700;color:#444;position:absolute;text-align:center}
+.ContentFlow .globalCaption{text-align:center;font-weight:normal;color:#444;font-size:14px;height:20px;position:relative;z-index:1;margin:2em auto}
+.ContentFlow .globalCaption .title{font-weight:bold;}
+.ContentFlow .loadIndicator{width:100%;height:100%;top:0;left:0;background:#000;position:absolute;z-index:65000}.ContentFlow .loadIndicator .indicator{background:url(img/loader.gif) center center no-repeat;width:100%;height:100%}
+* html .ContentFlow .loadIndicator .indicator{height:100px}
+.ContentFlow{position:relative;overflow:hidden}
+.ContentFlow *{margin:0;padding:0}
+.ContentFlow img{-ms-interpolation-mode:bicubic}
+.ContentFlow .mouseoverCheckElement{position:absolute;width:0;height:0;left:0;visibility:hidden}
+.ContentFlow:hover .mouseoverCheckElement{left:1px}
+.ContentFlow .flow{position:relative;z-index:0;visibility:hidden;width:100%;margin:0 auto}
+.ContentFlow .flow.hidden{visibility:hidden}
+.ContentFlow .flow .item{position:absolute;visibility:hidden;top:0;left:0}
+.ContentFlow .flow .item div.content{width:100%;height:100%}
+.ContentFlow .flow .item .label{display:none}
+.ContentFlow .flow .item canvas.reflection{margin-top:-1px}
+.ContentFlow .flow .item img.content,.ContentFlow .flow .item img.reflection,.ContentFlow .flow .item canvas.reflection{width:100%}
+.ContentFlow .flow .item .caption a,.ContentFlow .flow .item .caption a:link,.ContentFlow .flow .item .caption a:visited,.ContentFlow .flow .item .caption a:active,.ContentFlow .flow .item .caption a:hover,.ContentFlow .globalCaption .caption a,.ContentFlow .globalCaption .caption a:link,.ContentFlow .globalCaption .caption a:visited,.ContentFlow .globalCaption .caption a:active,.ContentFlow .globalCaption .caption a:hover{color:#FFF;font-size:0.8em;font-style:italic;text-decoration:none}
+.ContentFlow .flow .item .caption a:hover,.ContentFlow .globalCaption .caption a:hover{text-decoration:underline}
+.ContentFlow .flow .item .content,.ContentFlow .flow .item .reflection{display:block}
+
+*/
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 96%;
+  }
+
+  .header {
+    position: inherit;
+  }
+}
+
+/*# sourceMappingURL=application.css.map */
