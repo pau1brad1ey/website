@@ -1,0 +1,31 @@
+{
+  "name": "GreysphereWebsite",
+  "description": "Public website",
+  "version": "1.0.0",
+  "author": "Paul Bradley",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "gatsby": "^1.9.145",
+    "gatsby-cli": "^1.1.33",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "react-bootstrap": "^0.32.0",
+    "react-scrollspy": "^3.3.5"
+  },
+  "keywords": [
+    "Justin Harrison"
+  ],
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "standard",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && cp ./CNAME public/ && gh-pages -d public"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "standard": "^10.0.2"
+  }
+}
