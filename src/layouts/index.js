@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import './application.css'
 import logoImg from '../assets/img/logo.png'
 
+const thisYear = new Date().getFullYear()
 const Header = () => (
   <div className='header'>
     <div className='wrapper'>
@@ -23,7 +24,7 @@ const Footer = () => (
         <div className='info2'>Registered office : 11 Victor Road, Teddington, Middlesex. TW11 8SP.</div>
       </div>
       <div className='copyright'>
-        Copyright &copy; 2005 - 2018 Greysphere Ltd
+        Copyright &copy; 2005 - {thisYear} Greysphere Ltd
         <br />All Rights Reserved
       </div>
     </div>
