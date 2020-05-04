@@ -1,0 +1,41 @@
+.banner {
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: 50%;
+  min-height: 400px;
+  height: calc(100vh - 80px);
+  position: relative;
+  text-decoration: none;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.banner-content {
+  text-align: center;
+  padding: 100px 0;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+.banner__background {
+  position: absolute;
+  z-index: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform: translate3d(0,0,0);
+  background: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(180deg, rgba(147, 170, 175, 0.6), rgba(85, 108, 112, 0.95));
+  overflow: hidden;
+}
+
+.banner__background__asset {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: overlay;
+  background-size: cover;
+  background-position: 50%;
+}
