@@ -1,0 +1,2 @@
+webpackJsonp([0xf4436b2cd53b],{202:function(e,t,n){"use strict";function l(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var r=n(2),u=l(r),a=n(49),d=l(a),o=function(){return u.default.createElement("div",null,u.default.createElement(d.default,{title:"Agile web development | Greysphere Ltd",meta:[{name:"description",content:"Greypshere"},{name:"keywords",content:"Greysphere"}]}),u.default.createElement("h1",null,"Development"))};t.default=o,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-services-development-jsx-835fbbc1801efe4cbaf9.js.map
