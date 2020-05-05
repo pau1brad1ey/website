@@ -1,5 +1,5 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import Banner from '../components/banner'
 import Preloader from '../components/preloader'
 import Services from '../sections/headlineServices'
