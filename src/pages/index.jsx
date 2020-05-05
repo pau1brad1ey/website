@@ -1,11 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Layout from '../layouts/index'
 import Banner from '../components/banner'
 import Preloader from '../components/preloader'
 import Services from '../sections/headlineServices'
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <Helmet
       title='Agile web development | Greysphere Ltd'
       meta={[
@@ -24,7 +25,7 @@ const IndexPage = () => (
     />
     <Services />
     <Preloader />
-  </div>
+  </Layout>
 )
 
 export default IndexPage
